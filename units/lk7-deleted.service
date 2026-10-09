@@ -1,0 +1,8 @@
+[Unit]
+Description=LK7 process holding an unlinked log
+
+[Service]
+Type=exec
+User=lk7-demo
+ExecStart=/opt/lk7-lab/bin/deleted
+RuntimeMaxSec=15min

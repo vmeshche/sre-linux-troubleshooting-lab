@@ -1,0 +1,12 @@
+# Captured 2026-10-09; Ubuntu 26.04.1 ARM64, Linux 6.12.76-linuxkit, perf 7.0.14.
+# Saved measurement from the preparation environment, not your VM.
+# See samples/README.md and VALIDATION.md for provenance.
+
+
+ Performance counter stats for process id '820':
+
+           4964.91 msec task-clock
+                58      context-switches
+                 0      page-faults
+
+       5.009584877 seconds time elapsed

@@ -1,0 +1,9 @@
+[Unit]
+Description=LK7 old HTTP instance occupying the port
+
+[Service]
+Type=exec
+User=lk7-demo
+WorkingDirectory=/srv/lk7-lab/old
+ExecStart=/usr/bin/python3 -u -m http.server 8091 --bind 127.0.0.1
+RuntimeMaxSec=15min

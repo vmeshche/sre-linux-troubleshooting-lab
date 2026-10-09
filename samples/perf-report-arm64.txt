@@ -1,0 +1,28 @@
+# Captured 2026-10-09; Ubuntu 26.04.1 ARM64, Linux 6.12.76-linuxkit, perf 7.0.14.
+# Saved measurement from the preparation environment, not your VM.
+# See samples/README.md and VALIDATION.md for provenance.
+
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 488  of event 'cpu-clock:u'
+# Event count (approx.): 4929292880
+#
+# Overhead  Symbol           IPC   [IPC Coverage]
+# ........  ...............  ....................
+#
+   100.00%  [.] mix_numbers  -      -
+            |
+            ---process_batch
+               main
+               0xffff9fc72f1c
+               __libc_start_main
+               _start
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
