@@ -7,7 +7,7 @@ if [[ $(uname -s) != Linux ]] || [[ $(ps -p 1 -o comm=) != systemd ]]; then
 fi
 cat /etc/os-release
 uname -m
-for LAB_COMMAND in strace lsof ss gcc python3 timeout; do
+for LAB_COMMAND in strace lsof ss gcc python3 timeout readelf objdump nm strip ar file; do
   if command -v "$LAB_COMMAND" >/dev/null; then
     printf 'OK: %s\n' "$LAB_COMMAND"
   else
@@ -28,7 +28,7 @@ fi
 if command -v perf >/dev/null && perf --version; then
   printf 'INFO: perf exists. Test software events using the README preflight.\n'
 else
-  printf 'INFO: perf unavailable; use the documented recorded example in case 5.\n'
+  printf 'INFO: perf unavailable; use the documented recorded example in case 3.\n'
 fi
 if (( LAB_ERRORS > 0 )); then exit 1; fi
-printf 'Ready for cases 1-4. Check perf separately before case 5.\n'
+printf 'Ready for ELF and service cases. Check perf separately.\n'
